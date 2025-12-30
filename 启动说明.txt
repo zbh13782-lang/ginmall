@@ -1,0 +1,47 @@
+Gin Mall 项目启动说明
+========================
+
+问题分析：
+1. 前端缺少index.html文件（已修复）
+2. PowerShell不支持&&操作符导致路径切换失败
+3. 需要在正确的目录中运行npm命令
+
+解决方案：
+1. ✅ 已创建 index.html 文件
+2. ✅ 已修复 start-frontend.bat 脚本
+3. ✅ 后端已在3000端口运行
+
+启动步骤：
+==========
+
+方法1：使用修复的批处理脚本（推荐）
+1. 双击运行 "start-frontend-fixed.bat"
+2. 前端将在 http://localhost:5173 启动
+
+方法2：手动启动
+1. 打开命令提示符（cmd）
+2. 进入项目目录：cd E:\stud\gin_mall\frontend
+3. 运行：npm run dev
+4. 前端将在 http://localhost:5173 启动
+
+方法3：使用PowerShell（不推荐）
+1. 在项目根目录运行：.\start-frontend-fixed.bat
+
+验证启动：
+==========
+- 后端：http://localhost:3000 （已在运行）
+- 前端：http://localhost:5173 （启动后可访问）
+
+常见问题：
+==========
+1. 如果提示"npm: command not found"
+   - 确保已安装Node.js
+   - 重新安装依赖：npm install
+
+2. 如果端口被占用
+   - 关闭其他占用5173或3000端口的程序
+   - 或修改配置文件中的端口
+
+3. 如果前端无法连接后端
+   - 确保后端正在运行
+   - 检查防火墙设置
